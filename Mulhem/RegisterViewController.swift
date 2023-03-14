@@ -123,33 +123,33 @@ class RegisterViewController: UIViewController {
                 }
         }
         
-        NameCheck()
+//        NameCheck()
         
-//        let validationResult2 = isValidName()
-//        if validationResult2.0 == false {return}
-//
-//        let name = validationResult2.1
-//
-//        Name = name
-//        Global.shared.usercharacterName = name
-//        print("CharacterName : " , Name)
-//
-//
-//        print("Global email : " , Global.shared.useremailshare )
-//        print("Global password : ", Global.shared.userpasswordshare )
-//        print("Global  name : " , Global.shared.usercharacterName)
-//
-//
-//        Auth.auth().createUser(withEmail: Global.shared.useremailshare, password: Global.shared.userpasswordshare) { authResult , error in
-//            guard let userId  = authResult?.user.uid else {return}
-//            self.storeUserInformation(id: userId)
-//            if let e = error {
-//            print(e.localizedDescription)
-//            }else {
-//             // Go to our home screen
-//             self.performSegue(withIdentifier: "goToHomePage", sender: self)
-//           }
-//        }
+        let validationResult2 = isValidName()
+        if validationResult2.0 == false {return}
+
+        let name = validationResult2.1
+
+        Name = name
+        Global.shared.usercharacterName = name
+        print("CharacterName : " , Name)
+
+
+        print("Global email : " , Global.shared.useremailshare )
+        print("Global password : ", Global.shared.userpasswordshare )
+        print("Global  name : " , Global.shared.usercharacterName)
+
+
+        Auth.auth().createUser(withEmail: Global.shared.useremailshare, password: Global.shared.userpasswordshare) { authResult , error in
+            guard let userId  = authResult?.user.uid else {return}
+            self.storeUserInformation(id: userId)
+            if let e = error {
+            print(e.localizedDescription)
+            }else {
+             // Go to our home screen
+             self.performSegue(withIdentifier: "goToHomePage", sender: self)
+           }
+        }
         
     }// func
     
