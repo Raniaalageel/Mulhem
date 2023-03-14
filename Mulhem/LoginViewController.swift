@@ -102,7 +102,7 @@ class LoginViewController: UIViewController {
            
                 if (email != "m@gmail.com" || password != "123"){   //if no connect with firebase
                     print(email)
-                    print("Wrong email or password")
+                    print("Wrong email or password !!!")
                     let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
