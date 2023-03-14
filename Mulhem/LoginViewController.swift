@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+import CoreMedia
 
 
 class LoginViewController: UIViewController {
@@ -93,27 +97,64 @@ class LoginViewController: UIViewController {
         
 @IBAction func loginpressed(_ sender: Any) {
         
-            let validationResult = isValid()
-            if validationResult.0 == false { return }
-
-            let email = validationResult.1
-            let password = validationResult.2
+//            let validationResult = isValid()
+//            if validationResult.0 == false { return }
+//
+//            let email = validationResult.1
+//            let password = validationResult.2
+//
+//
+//                if (email != "m@gmail.com" || password != "123"){   //if no connect with firebase
+//                    print(email)
+//                    print("Wrong email or password !!!")
+//                    let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
+//                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                    self.present(alert, animated: true, completion: nil)
+//
+//                }else{   //user Auth in firebase
+//                    print("sucssesYES")
+//                    self.performSegue(withIdentifier: "go", sender: self)
+//
+//                }//end elsee
+//
+//    } //end func
     
+    let validationResult = isValid()
+    if validationResult.0 == false {return}
+
+    let email = validationResult.1
+    let password = validationResult.2
+    Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
+        if let e=error{   //if no connect with firebase
            
-                if (email != "m@gmail.com" || password != "123"){   //if no connect with firebase
-                    print(email)
-                    print("Wrong email or password !!!")
+            print(email)
+            Global.shared.useremailshare = email
+            print("Global.shared.useremailshare",Global.shared.useremailshare)
+            print(password)
+            print("failed 11111")
+            let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            }else{   //user Auth in firebase
+            print("sucssesYES")
+            Global.shared.useremailshare = email
+            print("Global.shared.useremailshare",Global.shared.useremailshare)
+            Task {
+                let db = Firestore.firestore()
+                if await self.checkEmailExist(email: email, collection: "User", field: "email") {
+                    print("child exists")
+                    self.performSegue(withIdentifier: "go", sender: self)}
+                else {
+                    print("does not exist")
                     let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
-                
-                }else{   //user Auth in firebase
-                    print("sucssesYES")
-                    self.performSegue(withIdentifier: "go", sender: self)
-                    
-                }//end elsee
                    
-           } //end func
+                } //end else
+            }  //end tak
+        } //end elsee
+    } //end sign in
+}//end loginpressed
                 
      
     
@@ -125,38 +166,34 @@ class LoginViewController: UIViewController {
     
 
     
-//    func checkEmailExist(email: String, collection: String, field: String) async -> Bool {
-//       // print("what??")
-//        let db = Firestore.firestore()
-//        do {
-//            let snapshot = try await db.collection(collection).whereField(field, isEqualTo: email).getDocuments()
-//            print("COUNT ", snapshot.count)
-//            print("not added")
-//            return snapshot.count != 0
-//        } catch {
-//            print(error.localizedDescription)
-//            print("added")
-//            return false
-//        }
-//
-//        //return false
-//    }
+    func checkEmailExist(email: String, collection: String, field: String) async -> Bool {
+       // print("what??")
+        let db = Firestore.firestore()
+        do {
+            let snapshot = try await db.collection(collection).whereField(field, isEqualTo: email).getDocuments()
+            print("COUNT ", snapshot.count)
+            print("not added")
+            return snapshot.count != 0
+        } catch {
+            print(error.localizedDescription)
+            print("added")
+            return false
+        }
+    }
     
     
 //    @@@@ Store use data in the firebase @@@@
     
-    
-//    func storeUserInformation(collection: String, data: [String: Any]) async {
-//        //  var ref: DocumentReference? = nil
-//        // guard let uid=Auth.auth().currentUser?.uid else {return }
-//        let db = Firestore.firestore()
-//        do {
-//            try await db.collection(collection).document().setData(data)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }  //end func
-    
-    
+    func storeUserInformation(collection: String, data: [String: Any]) async {
+        //  var ref: DocumentReference? = nil
+        // guard let uid=Auth.auth().currentUser?.uid else {return }
+        let db = Firestore.firestore()
+        do {
+            try await db.collection(collection).document().setData(data)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }  //end func
+ 
        
 }

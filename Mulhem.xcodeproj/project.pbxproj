@@ -35,6 +35,8 @@
 		F037A05C29C0DA3B009FE0C7 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F037A05B29C0DA3B009FE0C7 /* FirebaseRemoteConfigSwift */; };
 		F037A05E29C0DA3B009FE0C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F037A05D29C0DA3B009FE0C7 /* FirebaseStorage */; };
 		F037A06029C0DA3B009FE0C7 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F037A05F29C0DA3B009FE0C7 /* FirebaseStorageCombine-Community */; };
+		F037A06229C0E30A009FE0C7 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037A06129C0E30A009FE0C7 /* Global.swift */; };
+		F037A06429C0E4DA009FE0C7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037A06329C0E4DA009FE0C7 /* RegisterViewController.swift */; };
 		F03937EB29C0BB8F0018ABD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03937EA29C0BB8F0018ABD5 /* AppDelegate.swift */; };
 		F03937ED29C0BB8F0018ABD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03937EC29C0BB8F0018ABD5 /* SceneDelegate.swift */; };
 		F03937EF29C0BB8F0018ABD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03937EE29C0BB8F0018ABD5 /* ViewController.swift */; };
@@ -66,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		F037A02829C0D8E9009FE0C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F037A06129C0E30A009FE0C7 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		F037A06329C0E4DA009FE0C7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F03937E729C0BB8F0018ABD5 /* Mulhem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mulhem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03937EA29C0BB8F0018ABD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F03937EC29C0BB8F0018ABD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				F03937EC29C0BB8F0018ABD5 /* SceneDelegate.swift */,
 				F03937EE29C0BB8F0018ABD5 /* ViewController.swift */,
 				F039381A29C0BC3C0018ABD5 /* LoginViewController.swift */,
+				F037A06329C0E4DA009FE0C7 /* RegisterViewController.swift */,
+				F037A06129C0E30A009FE0C7 /* Global.swift */,
 				F03937F029C0BB8F0018ABD5 /* Main.storyboard */,
 				F03937F329C0BB900018ABD5 /* Assets.xcassets */,
 				F03937F529C0BB900018ABD5 /* LaunchScreen.storyboard */,
@@ -354,6 +360,8 @@
 				F039381B29C0BC3C0018ABD5 /* LoginViewController.swift in Sources */,
 				F03937EF29C0BB8F0018ABD5 /* ViewController.swift in Sources */,
 				F03937EB29C0BB8F0018ABD5 /* AppDelegate.swift in Sources */,
+				F037A06429C0E4DA009FE0C7 /* RegisterViewController.swift in Sources */,
+				F037A06229C0E30A009FE0C7 /* Global.swift in Sources */,
 				F03937ED29C0BB8F0018ABD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
