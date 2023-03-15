@@ -47,6 +47,9 @@
 		F039380C29C0BB910018ABD5 /* MulhemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F039380B29C0BB910018ABD5 /* MulhemUITests.swift */; };
 		F039380E29C0BB910018ABD5 /* MulhemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F039380D29C0BB910018ABD5 /* MulhemUITestsLaunchTests.swift */; };
 		F039381B29C0BC3C0018ABD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F039381A29C0BC3C0018ABD5 /* LoginViewController.swift */; };
+		F095663D29C21FA300F71965 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095663C29C21FA300F71965 /* ProfileViewController.swift */; };
+		F095663F29C220F500F71965 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095663E29C220F500F71965 /* UserInfo.swift */; };
+		F095664129C2274F00F71965 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095664029C2274F00F71965 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		F039380B29C0BB910018ABD5 /* MulhemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulhemUITests.swift; sourceTree = "<group>"; };
 		F039380D29C0BB910018ABD5 /* MulhemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulhemUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F039381A29C0BC3C0018ABD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F095663C29C21FA300F71965 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F095663E29C220F500F71965 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		F095664029C2274F00F71965 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,9 @@
 				F03937EE29C0BB8F0018ABD5 /* ViewController.swift */,
 				F039381A29C0BC3C0018ABD5 /* LoginViewController.swift */,
 				F037A06329C0E4DA009FE0C7 /* RegisterViewController.swift */,
+				F095663C29C21FA300F71965 /* ProfileViewController.swift */,
+				F095664029C2274F00F71965 /* EditProfileViewController.swift */,
+				F095663E29C220F500F71965 /* UserInfo.swift */,
 				F037A06129C0E30A009FE0C7 /* Global.swift */,
 				F03937F029C0BB8F0018ABD5 /* Main.storyboard */,
 				F03937F329C0BB900018ABD5 /* Assets.xcassets */,
@@ -361,8 +370,11 @@
 				F03937EF29C0BB8F0018ABD5 /* ViewController.swift in Sources */,
 				F03937EB29C0BB8F0018ABD5 /* AppDelegate.swift in Sources */,
 				F037A06429C0E4DA009FE0C7 /* RegisterViewController.swift in Sources */,
+				F095663F29C220F500F71965 /* UserInfo.swift in Sources */,
+				F095663D29C21FA300F71965 /* ProfileViewController.swift in Sources */,
 				F037A06229C0E30A009FE0C7 /* Global.swift in Sources */,
 				F03937ED29C0BB8F0018ABD5 /* SceneDelegate.swift in Sources */,
+				F095664129C2274F00F71965 /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
