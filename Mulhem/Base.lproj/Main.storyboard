@@ -275,7 +275,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S7M-Pz-rBH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.80982190369999996" green="0.67035287619999995" blue="0.53653705119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.88479846719999999" green="0.78416281939999999" blue="0.68841654060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="KdB-nL-oau" kind="relationship" relationship="viewControllers" id="8cs-Rw-aSb"/>
@@ -620,7 +621,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Fhk-0L-Uys"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
+    <color key="tintColor" red="0.88479846719999999" green="0.78416281939999999" blue="0.68841654060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="circle" width="94.333335876464844" height="82.666664123535156"/>
         <image name="circlebadge.fill" catalog="system" width="128" height="120"/>
@@ -628,9 +629,6 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
