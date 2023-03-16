@@ -80,7 +80,6 @@
 		F03937F129C0BB8F0018ABD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F03937F329C0BB900018ABD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F03937F629C0BB900018ABD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F03937F829C0BB900018ABD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F03937FD29C0BB910018ABD5 /* MulhemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MulhemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F039380129C0BB910018ABD5 /* MulhemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulhemTests.swift; sourceTree = "<group>"; };
 		F039380729C0BB910018ABD5 /* MulhemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MulhemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,7 +179,6 @@
 				F03937F329C0BB900018ABD5 /* Assets.xcassets */,
 				F03937F529C0BB900018ABD5 /* LaunchScreen.storyboard */,
 				F037A02829C0D8E9009FE0C7 /* GoogleService-Info.plist */,
-				F03937F829C0BB900018ABD5 /* Info.plist */,
 			);
 			path = Mulhem;
 			sourceTree = "<group>";
